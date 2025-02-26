@@ -1,0 +1,8 @@
+jasypt:
+  encryptor:
+    bean: jasyptEncryptor
+    password: password
+
+jwt:
+  secret: jwtscretjwtscretjwtscretjwtscretjwtscretjwtscretjwtscretjwtscretjwtscretjwtscretjwtscretjwtscretjwtscret
+  expiration-period: 10000
