@@ -5,7 +5,7 @@ on:
     branches:
       - develop
     paths:
-      - ../../backend
+      - backend/**
       - .github/**
 
 permissions:
@@ -52,4 +52,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
       - name: Test with Gradle
-        run: ./gradlew :pcloud-api:test
+        run: |
+          ./gradlew :tick-core:test
+          ./gradlew :tick-api:test
+        

@@ -1,7 +1,7 @@
 package com.api.global.exceptions
 
-import com.common.global.exceptions.CustomException
-import com.common.global.exceptions.response.ExceptionResponse
+import com.common.global.exceptions.base.CustomException
+import com.common.global.exceptions.base.ExceptionResponse
 import com.fasterxml.jackson.module.kotlin.MissingKotlinParameterException
 import jakarta.servlet.http.HttpServletRequest
 import org.slf4j.LoggerFactory
@@ -66,9 +66,9 @@ class GlobalExceptionAdvice {
     ): ResponseEntity<ExceptionResponse> {
         val type = exception.getExceptionType()
 
-        log.info(
-            "잘못된 요청이 들어왔습니다. uri: {} {}, 내용: {}, SPRING_LOG: {}",
-            request.method, request.requestURI, type.message, exception.message
+        log.warn(
+            "잘못된 요청이 들어왔습니다. uri: {} {}, 내용: {}, SPRING_LOG: {}, exception: {}",
+            request.method, request.requestURI, type.message, exception.message, exception.localizedMessage
         )
 
         return ResponseEntity.status(type.httpStatusCode)

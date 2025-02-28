@@ -1,4 +1,4 @@
-package com.common.global.exceptions
+package com.common.global.exceptions.base
 
 open class CustomException(
     private val customExceptionType: CustomExceptionType
