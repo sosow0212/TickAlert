@@ -1,7 +1,3 @@
-server:
-  servlet:
-    context-path: /api
-
 spring:
   servlet:
     multipart:
@@ -9,4 +5,4 @@ spring:
       max-request-size: 10MB
 
 swagger:
-  url: http://localhost:8080/api
+  url: http://localhost:8080
