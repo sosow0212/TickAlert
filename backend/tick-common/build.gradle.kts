@@ -21,4 +21,7 @@ dependencies {
 
     // security-crypto
     api("org.springframework.security:spring-security-crypto")
+
+    // webflux
+    api("org.springframework.boot:spring-boot-starter-webflux:3.3.3")
 }
